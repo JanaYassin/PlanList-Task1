@@ -3,7 +3,7 @@ import './PlanDetails.css';
 const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
   const planDetails = {
     1: {
-      details: 'Details of Plan 1',
+      details: 'Base Plan',
       Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
@@ -13,7 +13,7 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
       },
     },
     2: {
-      details: 'Details of Plan 2',
+      details: 'Fuse Plan',
       Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
@@ -23,7 +23,7 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
       },
     },
     3: {
-      details: 'Details of Plan 3',
+      details: 'Extro Plan',
       Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
@@ -33,7 +33,7 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
       },
     },
     4: {
-      details: 'Details of Plan 4',
+      details: 'Universe Plan',
       Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
