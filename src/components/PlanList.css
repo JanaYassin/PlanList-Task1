@@ -21,8 +21,8 @@
 
 .plan-item:hover {
   cursor: pointer;
-  background-color: #f0f0f0;
-  color: black;
+  background-color: #16A085;
+  color: white;
 }
 
 .selected {
