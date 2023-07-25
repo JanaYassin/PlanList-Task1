@@ -4,7 +4,7 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
   const planDetails = {
     1: {
       details: 'Details of Plan 1',
-      fusePlan: {
+      Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
         chatSupport: false,
@@ -14,7 +14,7 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
     },
     2: {
       details: 'Details of Plan 2',
-      fusePlan: {
+      Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
         chatSupport: true,
@@ -24,17 +24,17 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
     },
     3: {
       details: 'Details of Plan 3',
-      fusePlan: {
-        allLimitedLinks: false,
-        ownAnalyticPlatform: false,
-        chatSupport: false,
+      Plan: {
+        allLimitedLinks: true,
+        ownAnalyticPlatform: true,
+        chatSupport: true,
         optimizeHashtag: true,
         unlimitedUser: false,
       },
     },
     4: {
       details: 'Details of Plan 4',
-      fusePlan: {
+      Plan: {
         allLimitedLinks: true,
         ownAnalyticPlatform: true,
         chatSupport: true,
@@ -44,14 +44,14 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
     },
   };
 
-  const handleFusePlanChange = (field) => {
-    const updatedFusePlan = {
-      ...planDetails[selectedPlan].fusePlan,
-      [field]: !planDetails[selectedPlan].fusePlan[field],
+  const handlePlanChange = (field) => {
+    const updatedPlan = {
+      ...planDetails[selectedPlan].Plan,
+      [field]: !planDetails[selectedPlan].Plan[field],
     };
     const updatedPlanDetails = {
       ...planDetails[selectedPlan],
-      fusePlan: updatedFusePlan,
+      Plan: updatedPlan,
     };
     planDetails[selectedPlan] = updatedPlanDetails;
     console.log(planDetails);
@@ -76,8 +76,8 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
             <input
               type="radio"
               id="allLimitedLinks"
-              checked={planDetails[selectedPlan]?.fusePlan.allLimitedLinks}
-              onChange={() => handleFusePlanChange('allLimitedLinks')}
+              checked={planDetails[selectedPlan]?.Plan.allLimitedLinks}
+              onChange={() => handlePlanChange('allLimitedLinks')}
             />
             <label htmlFor="allLimitedLinks"></label>
           </td>
@@ -88,8 +88,8 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
             <input
               type="radio"
               id="ownAnalyticPlatform"
-              checked={planDetails[selectedPlan]?.fusePlan.ownAnalyticPlatform}
-              onChange={() => handleFusePlanChange('ownAnalyticPlatform')}
+              checked={planDetails[selectedPlan]?.Plan.ownAnalyticPlatform}
+              onChange={() => handlePlanChange('ownAnalyticPlatform')}
             />
             <label htmlFor="ownAnalyticPlatform"></label>
           </td>
@@ -100,8 +100,8 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
             <input
               type="radio"
               id="chatSupport"
-              checked={planDetails[selectedPlan]?.fusePlan.chatSupport}
-              onChange={() => handleFusePlanChange('chatSupport')}
+              checked={planDetails[selectedPlan]?.Plan.chatSupport}
+              onChange={() => handlePlanChange('chatSupport')}
             />
             <label htmlFor="chatSupport"></label>
           </td>
@@ -112,8 +112,8 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
             <input
               type="radio"
               id="optimizeHashtag"
-              checked={planDetails[selectedPlan]?.fusePlan.optimizeHashtag}
-              onChange={() => handleFusePlanChange('optimizeHashtag')}
+              checked={planDetails[selectedPlan]?.Plan.optimizeHashtag}
+              onChange={() => handlePlanChange('optimizeHashtag')}
             />
             <label htmlFor="optimizeHashtag"></label>
           </td>
@@ -124,8 +124,8 @@ const PlanDetails = ({ selectedPlan, isMonthlyPlan }) => {
             <input
               type="radio"
               id="unlimitedUser"
-              checked={planDetails[selectedPlan]?.fusePlan.unlimitedUser}
-              onChange={() => handleFusePlanChange('unlimitedUser')}
+              checked={planDetails[selectedPlan]?.Plan.unlimitedUser}
+              onChange={() => handlePlanChange('unlimitedUser')}
             />
             <label htmlFor="unlimitedUser"></label>
           </td>
